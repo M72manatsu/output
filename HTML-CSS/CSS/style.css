@@ -1,0 +1,234 @@
+/*CSSリセット用　元々HTMLについているCSSがリセットできる*/
+*{
+    /*padding,borderが要素の中に入る→不明なので理解を深める*/
+    box-sizing:border-box;
+}
+ul{
+    /*リストの・を消す働き→不明なので理解を深める*/
+    list-style:none;
+    margin:0;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,button{
+    margin:0;
+    padding:0;
+    font-weight:normal;
+}
+
+a{
+    color:inherit;
+    /*文字の下の線を消す→不明なので理解を深める*/
+    text-decoration:none;
+}
+
+body{
+    color:#555;
+    margin:0;
+    line-height:1.6;
+}
+
+/*--------------共通スタイル--------------*/
+.inner{
+    width:1280px;
+    padding:90px 0;
+    /*★★★課題一覧 他に入れるものはないのか？*/
+}
+
+.title{
+    display:flex;
+    width:100%;
+    color:#707070;
+    font-size:18px;
+    /*★★★課題一覧 未解決フォント*/
+}
+
+.title::after{
+    content:"";
+    display:block;
+    width:90px;
+    margin-right:20px;
+    border-top:1px solid #707070;
+}
+/*header*/
+header{
+    /*ナビを横並びにする*/
+    display:flex;
+    /*画面表示デザインでheaderとmain間の境をなくせる*/
+    position:absolute;
+}
+
+.header-logo{
+    font-size:38px;
+    color:#000000;
+    /*68pxが縦77pxが横を指定*/
+    margin:68px 211px 694px 77px;
+    width:306px;
+}
+
+.header-nav ul{
+    /*ナビを横並びにする*/
+    display:flex;
+    /*77は縦0は横*/
+    padding: 85px;
+    width:381px;
+    height:42px;
+    /*右に余白があるので右に20pxずつ余白をつける*/
+    margin:0px 0px 0px -350px;
+}
+
+/*この指定でli内の一つ一つに適応される*/
+.header-nav ul li{
+    /*menu～reserveまでの余白が20になる*/
+    margin-left:20px;
+    font-size:18px;
+    color:#707070;
+}
+
+.MENU{
+    color:#000000;
+    width: 60px;
+    height:18px;
+    font-size:18px;
+    margin:2px 0 50px 25px;
+}
+
+/*MENUの疑似要素で下線を作成*/
+.MENU::after{
+    content:"";
+    display:block;
+    width:100%;
+    margin:-33px 0 0 0;
+    border-top:1px solid #000000;
+}
+
+/*---------------mainの始まり-------------------*/
+/*---------------toppage-------------------*/
+#toppage{
+    /*ページの縦と横の長さ*/
+    height:800px;
+    /*画像を入れる*/
+    background-image:url(../img/Blond\ woman\ with\ long\ curly\ beautiful\ hair.png);
+    /*この指定で繰り返し画像でなくなる*/
+    background-repeat:no-repeat;
+    background-size:600px 800px;
+    /*画像を右端半分に表示*/
+    background-position:55%;
+}
+
+/*髪は大事です*/
+.toppage-word{
+    /*ページ一番上からの距離*/
+    padding-top:296px;
+    /*下をword2との余白とした指定*/
+    padding:296px 794px 48px 130px;
+    font-size:38px;
+    color:#000000;
+    /*★★★課題一覧 未解決フォント*/
+}
+
+/*英語*/
+.toppage-word2{
+    padding-left:130px;
+    font-size:38px;
+    width:390px;
+    height:107px;
+    color:#000000;
+    /*★★★課題一覧 未解決フォント*/
+}
+
+/*---------------concept-------------------*/
+#concept{
+    background-color:#A193861F;
+    height:950px; 
+    position:relative;
+    background-repeat:no-repeat;
+}
+/*疑似要素(=２つめの色追加)で2色目を下に追加*/
+#concept::after{
+    content:"";
+    background-color:#A1938689;
+    /*relativeにたいするセットで覚える*/
+    position:absolute;
+    top:350px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+
+.concept-title{
+    width:113px;
+    height:24px;
+    font-size:18px;
+    padding:107px;
+}
+
+.concept-word{
+    color:#FFFFFF;
+    width:445px;
+    height:40px;
+    padding:340px 660px 130px 175px;
+}
+.concept-img{
+    display:flex;
+    width:670px;
+    height:410px;
+    text-align:center;
+    z-index:5;
+}
+
+.concept-img2{
+    display:flex;
+    width:390px;
+    height:410px;
+    text-align:center;
+}
+
+/*---------------menu-------------------*/
+#menu{
+    background-color:#FFFFFF;
+    height:950px;
+}
+
+.menu-title{
+    width:113px;
+    height:24px;
+    font-size:18px;
+}
+/*---------------access-------------------*/
+#access{
+    background-color:#A193861F;
+    height:760px;
+    position:relative;
+}
+
+#access::after{
+    content:"";
+    background-color:#A1938689;
+    position:absolute;
+    top:290px;
+    right:750px;
+    bottom:70px;
+    left:0px;
+}
+
+/*---------------reserve-------------------*/
+#reserve{
+    background-color:#FFFFFF;
+    height:150px;
+}
+
+.reserve-logo{
+    font-size:32px;
+    color:#7070704D;
+    width:258px;
+    margin:248px 0 60px 100px;
+}
+
+.box1{
+    width:100px;
+    height:18px;
+    font-size:18px;
+    color:#707070;
+    padding:0.5em 1em;
+    margin:2em 0;
+}
